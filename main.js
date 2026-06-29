@@ -23,7 +23,7 @@ let currentBackground = JSON.parse(
   localStorage.getItem("contentSystemBackground"),
 ) || {
   type: "none",
-  src: "",
+  src: "https://raw.githubusercontent.com/dh1888/dh18/main/imge/1.jpg",
   isLocalFile: false,
 };
 
