@@ -18,14 +18,16 @@ let lastX = 0,
   lastY = 0;
 let lastTime = 0;
 
-// 当前选中的背景 - 从本地存储加载
-let currentBackground = JSON.parse(
-  localStorage.getItem("contentSystemBackground"),
-) || {
-  type: "none",
+const DEFAULT_BACKGROUND = {
+  type: "image",
   src: "https://raw.githubusercontent.com/dh1888/dh18/main/imge/1.jpg",
   isLocalFile: false,
 };
+
+// 当前选中的背景 - 从本地存储加载
+let currentBackground = JSON.parse(
+  localStorage.getItem("contentSystemBackground"),
+) || DEFAULT_BACKGROUND;
 
 // 透明度设置 - 从本地存储加载
 let backgroundOpacity =
